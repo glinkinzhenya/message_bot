@@ -24,7 +24,7 @@ const sendMessage = async (req, res) => {
   const formattedData = formatJson(data);
 
     const sendEmail = {
-      to: "glinkinzhenya@gmail.com",
+      to: "tuttikidstop@gmail.com",
       subject: "Нове замовлення від Tutti Kids",
       text: formattedData,
     };
