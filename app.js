@@ -3,6 +3,8 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const sendMessage = require("./controler/tuttiKidsControler")
+const circle = require("./controler/circleController");
+
 
 require("dotenv").config();
 
@@ -15,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/tutti-kids", sendMessage);
+app.post("/circle", circle);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Server is running" });
